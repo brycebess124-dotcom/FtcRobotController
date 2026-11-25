@@ -13,17 +13,16 @@ public class IfPractice extends OpMode {
 
     @Override
     public void loop() {
-        double leftY = gamepad1.left_stick_y;
+        double motorSpeed = gamepad1.left_stick_y;
 
-        if(leftY < 0) {
-            telemetry.addData("Left Stick", "is Negative");
-        }
-        else if(leftY > 0) {
-            telemetry.addData("Left Stick", "is greater than zero");
-        }
-        else {
-            telemetry.addData("Left Stick", "is zero");
-        }
-        telemetry.addData("Left Stick Value", leftY);
+       if(!gamepad1.a){
+           motorSpeed *= 0.5;
+       }
+
+       telemetry.addData("Left Stick value", motorSpeed);
     }
 }
+
+/*
+1. make a turbo button. If the a button is not pressed, multiply the motor speed by 0.5 otherwise use full speed.
+ */
