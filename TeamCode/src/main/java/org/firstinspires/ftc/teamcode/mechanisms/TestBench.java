@@ -16,6 +16,7 @@ public class TestBench {
     }
 
     public boolean isTouchSensorReleased(){
+
         return touchSensor.getState();
     }
 }
