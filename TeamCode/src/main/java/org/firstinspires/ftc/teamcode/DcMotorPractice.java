@@ -5,11 +5,11 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
-import org.firstinspires.ftc.teamcode.mechanisms.TestBench1;
+import org.firstinspires.ftc.teamcode.mechanisms.TestBench;
 
 @TeleOp
 public class DcMotorPractice extends OpMode {
-    TestBench1 bench = new TestBench1();
+    TestBench bench = new TestBench();
     @Override
     public void init() {
         bench.init(hardwareMap);
